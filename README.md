@@ -11,7 +11,7 @@ crc-itu [![Build Status](https://travis-ci.org/damphat/crc-itu.png?branch=master
 Install:
 
 ```
-npm install crc-itu
+npm install node-redis-crc16 --save
 ```
 
 Usage:
