@@ -88,7 +88,7 @@ Handle<Value> crc16(const Arguments& args) {
 	return scope.Close(ret);
 }
 
-void init(Handle<Object> exports) {
+extern "C" void init(Handle<Object> exports) {
 	exports->Set(String::NewSymbol("crc16"), FunctionTemplate::New(crc16)->GetFunction());
 }
 
