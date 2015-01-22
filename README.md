@@ -17,7 +17,7 @@ npm install node-redis-crc16 --save
 Usage:
 
 ```
-var crc16 = require('crc-itu').crc16;
+var crc16 = require('node-redis-crc16').crc16;
 
 // with string and encoding
 var ret = crc16('0d0103588990501766460026', 'hex');
