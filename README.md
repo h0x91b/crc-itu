@@ -1,3 +1,10 @@
+node-redis-crc16
+=======
+
+crc16 CCIT Xmodem hash which working properly with redis-cluster
+
+
+Forked from:
 crc-itu [![Build Status](https://travis-ci.org/damphat/crc-itu.png?branch=master)](https://travis-ci.org/damphat/crc-itu)
 =======
 

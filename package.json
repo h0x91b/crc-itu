@@ -1,7 +1,7 @@
 {
-  "name": "crc-itu",
-  "version": "0.0.2",
-  "description": "crc-itu 16 bits",
+  "name": "node-redis-crc16",
+  "version": "0.0.1",
+  "description": "crc16-icct XModem 16 bits which use redis for cluster",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
@@ -9,16 +9,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/damphat/crc-itu.git"
+    "url": "https://github.com/h0x91b/node-redis-crc16.git"
   },
   "keywords": [
     "crc",
-    "itu"
+    "itu",
+    "redis"
   ],
-  "author": "damphat@gmail.com",
+  "author": "h0x91b@gmail.com",
   "gypfile": true,
   "bugs": {
-    "url": "https://github.com/damphat/crc-itu/issues"
+    "url": "https://github.com/h0x91b/node-redis-crc16/issues"
   },
-  "homepage": "https://github.com/damphat/crc-itu"
+  "homepage": "https://github.com/h0x91b/node-redis-crc16/issues"
 }
