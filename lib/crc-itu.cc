@@ -1,6 +1,7 @@
 #include <node.h>
 #include <v8.h>
 #include <node_buffer.h>
+#include <nan.h>
 
 using namespace v8;
 using namespace node;
@@ -66,10 +67,10 @@ uint16_t crc16ccitt_redisXmodem(const U8 *buf, int len) {
     return crc;
 }
 
-Handle<Value> crc16(const Arguments& args) {
-	HandleScope scope;
+NAN_METHOD(crc16) {
+	NanScope();
 
-	Local<Value> ret = Local<Value>::New(Undefined());
+	Local<Value> ret = NanUndefined();
 
 	if(args[0]->IsObject()) {
 		Local<Object> bufferObj    = args[0]->ToObject();
@@ -77,19 +78,20 @@ Handle<Value> crc16(const Arguments& args) {
 		int bufferLength = Buffer::Length(bufferObj);
 
 		if(bufferLength >= 0) {
-			ret = Number::New(crc16ccitt_redisXmodem(bufferData, bufferLength));			
+			ret = NanNew<Number>(crc16ccitt_redisXmodem(bufferData, bufferLength));
 		} else {
-			return ThrowException(Exception::TypeError(String::New("Wrong param! syntax: crc16(buffer)")));
+			NanThrowTypeError("Wrong param! syntax: crc16(buffer)");
+			NanReturnUndefined();
 		}
 	} else {
-		return ThrowException(Exception::TypeError(String::New("Wrong param! syntax: crc16(buffer)")));
+		NanThrowTypeError("Wrong param! syntax: crc16(buffer)");
+		NanReturnUndefined();
 	}
-
-	return scope.Close(ret);
+	NanReturnValue(ret);
 }
 
 extern "C" void init(Handle<Object> exports) {
-	exports->Set(String::NewSymbol("crc16"), FunctionTemplate::New(crc16)->GetFunction());
+	NODE_SET_METHOD(exports, "crc16", crc16);
 }
 
 NODE_MODULE(crc_itu, init)
