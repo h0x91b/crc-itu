@@ -1,7 +1,7 @@
 node-redis-crc16
 =======
 
-crc16 CCIT Xmodem hash which working properly with redis-cluster
+CRC16 CCIT Xmodem hash which working properly with redis-cluster and UNICODE
 
 
 Forked from:

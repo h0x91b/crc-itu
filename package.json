@@ -3,8 +3,8 @@
   "version": "0.0.4",
   "description": "crc16-icct XModem 16 bits which use redis for cluster",
   "main": "index.js",
-  "engines" : { 
-    "node" : ">=0.8" 
+  "engines": {
+    "node": ">=0.8"
   },
   "scripts": {
     "test": "node test.js",
@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/h0x91b/node-redis-crc16/issues",
   "dependencies": {
-    "nan": "^1.7.0"
+    "nan": "^2.14.0"
   }
 }
