@@ -1,6 +1,6 @@
 {
   "name": "node-redis-crc16",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "crc16-icct XModem 16 bits which use redis for cluster",
   "main": "index.js",
   "engines": {
